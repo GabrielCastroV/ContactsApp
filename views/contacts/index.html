@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../styles/output.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="contactList.css">
+    <link rel="icon" href="/images/contact-list-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-zinc-50 dark:bg-slate-800">
+    <nav id="nav" class="fixed top-0 right-0 left-0 h-16 border-b-2 border-slate-600">
+    </nav> 
+    <div id="notification" class="fixed top-20 right-0 left-0">
+    </div>
+    <div id="loading-screen" class="flex flex-col items-center gap-6 bg-slate-300 dark:bg-transparent rounded-lg p-4">
+        <span class="loaderBear"></span>
+        <p class="dark:text-zinc-50 font-extrabold">CARGANDO TUS CONTACTOS...</p>
+    </div>
+    <main id="main-container" class="dark:bg-[#334155] bg-[#526987] flex-col justify-around items-center hidden">
+        <h1 id="main-title">Contactos</h1>
+        <form id="form">
+            <div class="form-name-input">
+                <input id="name-input" placeholder="Ingresar nombre y apellido" autocomplete="off">
+                <p class="info-text">-Cada nombre debe contener entre 2 a 16 letras. <br> -Debes comenzar el nombre y el apellido con letra mayuscula.  <br>-No uses simbolos ni números!</p>
+            </div>
+            <div class="form-phone-input">
+                <input id="phone-input" placeholder= "Ingresar número telefónico" autocomplete="off">
+                <p class="info-text">El número debe ser venezolano! ej: 04121234567</p>
+            </div> 
+            <span id="loader" class="loader mx-auto hidden"></span>   
+            <button class="form-btn disabled:cursor-not-allowed disabled:bg-slate-400 duration-200 bg-zinc-50" disabled>Enviar</button>
+        </form>
+        <ul id="list">
+        </ul>
+    </main>  
+    <div id="closed" class="fixed flex items-center justify-center">
+	</div>  
+    <script src="index.js" type="module"></script>
+    <script src="../components/nav.js"></script>
+    <script src="../components/notification.js" type="module"></script>
+</body>
+</html>
