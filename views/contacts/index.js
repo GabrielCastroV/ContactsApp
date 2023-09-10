@@ -189,6 +189,7 @@ list.addEventListener('click', async e => {
                 } catch (error) {
                     createNotification(true, 'No se ha podido actualizar el nombre. Error de conexión.')
                     updating.classList.add('hidden');
+                    editIcon.classList.remove('hide');
                     setTimeout(() => {
                         notification.classList.add('hidden');
                     }, 5000)
@@ -213,6 +214,7 @@ list.addEventListener('click', async e => {
                 } catch (error) {
                     createNotification(true, 'No se ha podido actualizar el número. Error de conexión.')
                     updating.classList.add('hidden');
+                    editIcon.classList.remove('hide');
                     setTimeout(() => {
                         notification.classList.add('hidden');
                     }, 5000)

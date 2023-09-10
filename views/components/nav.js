@@ -109,12 +109,14 @@ const createNavContacts = () => {
 
           <div class="hidden md:flex flex-row gap-4">
             <button id="close-btn" class="hover:underline dark:text-slate-50">Cerrar sesión</button>
+            <span class="updating hidden"></span>
           </div>
 
           <!-- menu mobile -->
 
             <div class="fixed bg-slate-800 bg-opacity-90 top-16 right-0 hidden left-0 bottom-0 justify-center items-center flex-col text-slate-50 gap-4">
                 <button id="close-btn" class="bg-[#39BBBD] hover:bg-[#429fa0] rounded-lg p-4">Cerrar sesión</button>
+                <span class="updating hidden"></span>
             </div>          
     </div>
     `;
@@ -136,7 +138,6 @@ if (window.location.pathname === '/') {
     createNavLogin();
 } else if (window.location.pathname === '/contacts/') {
     createNavContacts();
-
 }
 
 const navBtn = navbar.children[0].children[1];
@@ -149,35 +150,48 @@ navBtn.addEventListener('click', e => {
         navBtn.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" >';
         menuMobile.classList.remove('hidden');
         menuMobile.classList.add('flex');
-        // mainChildren.classList.add('blur-lg');
 
     } else {
         navBtn.classList.remove('active');
         navBtn.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />';
         menuMobile.classList.add('hidden');
         menuMobile.classList.remove('flex');
-        // mainChildren.classList.remove('blur-lg');
+
 
     }
 });
 const closeBtnDesktop = navbar.children[0].children[2].children[0];
+const loaderLogoutDesktop = navbar.children[0].children[2].children[1];
 const closeBtnMobile = navbar.children[0].children[3].children[0];
+const loaderLogoutMobile = navbar.children[0].children[3].children[1];
 
 closeBtnDesktop.addEventListener('click', async () => {
+    closeBtnDesktop.classList.add('hidden');
+    loaderLogoutDesktop.classList.remove('hidden');
     try {
-        closed();
         await axios.get('/api/logout');
+        closed();
+        closeBtnDesktop.classList.remove('hidden');
+        loaderLogoutDesktop.classList.add('hidden');
         window.location.pathname = '/login';
     } catch (error) {
+        closeBtnDesktop.classList.remove('hidden');
+        loaderLogoutDesktop.classList.add('hidden');
         console.log(error);
     }
 });
 closeBtnMobile.addEventListener('click', async () => {
+    closeBtnMobile.classList.add('hidden');
+    loaderLogoutMobile.classList.remove('hidden');
     try {
-        closed();
         await axios.get('/api/logout');
+        closed();
+        closeBtnMobile.classList.remove('hidden');
+        loaderLogoutMobile.classList.add('hidden');
         window.location.pathname = '/login';
     } catch (error) {
+        closeBtnMobile.classList.remove('hidden');
+        loaderLogoutMobile.classList.add('hidden');
         console.log(error);
     }
 });
