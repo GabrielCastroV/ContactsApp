@@ -1,6 +1,7 @@
 const div = document.querySelector('#notification');
 
 export const createNotification = (isError, message) => {
+    div.classList.remove('hidden')
     if (isError) {
         div.innerHTML = `
         <div class="max-w-7xl mx-auto px-4 flex justify-end">
