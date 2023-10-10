@@ -758,6 +758,41 @@ video {
   --tw-bg-opacity: 0.9;
 }
 
+.from-green-400 {
+  --tw-gradient-from: #4ade80 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(74 222 128 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#194448\] {
+  --tw-gradient-from: #194448 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(25 68 72 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-\[red\] {
+  --tw-gradient-to: rgb(255 0 0 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), red var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.via-\[\#1a8187\] {
+  --tw-gradient-to: rgb(26 129 135 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #1a8187 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.via-\[\#185257\] {
+  --tw-gradient-to: rgb(24 82 87 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #185257 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-blue-500 {
+  --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
+}
+
+.to-\[\#08272b\] {
+  --tw-gradient-to: #08272b var(--tw-gradient-to-position);
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1158,6 +1193,11 @@ video {
 }
 
 @media (prefers-color-scheme: dark) {
+  .dark\:bg-\[\#194448\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(25 68 72 / var(--tw-bg-opacity));
+  }
+
   .dark\:bg-\[\#334155\] {
     --tw-bg-opacity: 1;
     background-color: rgb(51 65 85 / var(--tw-bg-opacity));
@@ -1180,6 +1220,23 @@ video {
 
   .dark\:bg-transparent {
     background-color: transparent;
+  }
+
+  .dark\:bg-\[\#08272b\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(8 39 43 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+
+  .dark\:bg-gradient-to-tr {
+    background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+  }
+
+  .dark\:bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
   }
 
   .dark\:text-slate-50 {

@@ -156,8 +156,6 @@ navBtn.addEventListener('click', e => {
         navBtn.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />';
         menuMobile.classList.add('hidden');
         menuMobile.classList.remove('flex');
-
-
     }
 });
 const closeBtnDesktop = navbar.children[0].children[2].children[0];
