@@ -13,9 +13,18 @@ const createNavHome = () => {
 
         <!-- mobile version -->
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 p-2 rounded-lg hover:bg-zinc-300 dark:text-zinc-50 hover:dark:bg-slate-700 md:hidden cursor-pointer">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
+        <!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 p-2 rounded-lg hover:bg-zinc-300 dark:text-zinc-50 hover:dark:bg-slate-700 md:hidden cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg> -->
+
+        <label class="hamburger p-2 rounded-lg md:hidden">
+            <input type="checkbox">
+            <svg viewBox="0 0 32 32" class="red">
+                <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22" stroke="black"></path>
+                <path class="line" d="M7 16 27 16"></path>
+            </svg>
+        </label>
+        
 
         <!-- tablet/pc version -->
 
@@ -27,8 +36,8 @@ const createNavHome = () => {
           <!-- menu mobile -->
 
             <div class="fixed bg-slate-800 bg-opacity-90 top-16 right-0 hidden left-0 bottom-0 justify-center items-center flex-col text-slate-50 gap-4">
-                <a href="/login/" class="bg-[#39BBBD] hover:bg-[#429fa0] dark:text-zinc-900 rounded-lg p-4">Iniciar Sesión</a>
-                <a href="/signup/" class="bg-[#39BBBD] hover:bg-[#429fa0] dark:text-zinc-900 rounded-lg p-4">Registro</a>
+                <a href="/login/" class="bg-[#f1fcfb] hover:bg-[#d0f7f3] text-zinc-900 dark:text-zinc-900 rounded-lg p-4 w-32 text-center">Iniciar Sesión</a>
+                <a href="/signup/" class="bg-[#39BBBD] hover:bg-[#429fa0] dark:text-zinc-900 rounded-lg p-4 w-32 text-center">Registro</a>
             </div>          
     </div>
     `;
@@ -140,18 +149,18 @@ if (window.location.pathname === '/') {
 
 const navBtn = navbar.children[0].children[1];
 
-// eslint-disable-next-line no-unused-vars
-navBtn.addEventListener('click', e => {
+
+navBtn.addEventListener('change', () => {
     const menuMobile = navbar.children[0].children[3];
     if (!navBtn.classList.contains('active')) {
         navBtn.classList.add('active');
-        navBtn.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" >';
+        // navBtn.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" >';
         menuMobile.classList.remove('hidden');
         menuMobile.classList.add('flex');
 
     } else {
         navBtn.classList.remove('active');
-        navBtn.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />';
+        // navBtn.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />';
         menuMobile.classList.add('hidden');
         menuMobile.classList.remove('flex');
     }
