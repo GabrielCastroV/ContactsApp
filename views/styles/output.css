@@ -611,6 +611,10 @@ video {
   width: 50%;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
 .w-40 {
   width: 10rem;
 }
@@ -629,10 +633,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-32 {
-  width: 8rem;
 }
 
 .max-w-7xl {
@@ -1147,6 +1147,13 @@ video {
               stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (prefers-color-scheme: dark) {
+  .line {
+    stroke: white;
+    /* Color del texto en modo oscuro */
+  }
+}
+
 .line-top-bottom {
   stroke-dasharray: 12 63;
 }
@@ -1160,23 +1167,19 @@ video {
   stroke-dashoffset: -32.42;
 }
 
-.hover\:bg-\[\#\#d0f7f3\]:hover {
-  background-color: ##d0f7f3;
-}
-
 .hover\:bg-\[\#429fa0\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(66 159 160 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-zinc-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(212 212 216 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-\[\#d0f7f3\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(208 247 243 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-zinc-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 212 216 / var(--tw-bg-opacity));
 }
 
 .hover\:underline:hover {
@@ -1325,5 +1328,21 @@ video {
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
+  .lg\:justify-around {
+    justify-content: space-around;
+  }
+
+  .lg\:justify-evenly {
+    justify-content: space-evenly;
+  }
+
+  .lg\:gap-16 {
+    gap: 4rem;
   }
 }
