@@ -603,6 +603,14 @@ video {
   height: 100vh;
 }
 
+.h-auto {
+  height: auto;
+}
+
+.h-\[100\%\] {
+  height: 100%;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -625,6 +633,26 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
+}
+
+.w-3\/5 {
+  width: 60%;
+}
+
+.w-3\/12 {
+  width: 25%;
+}
+
+.w-4\/12 {
+  width: 33.333333%;
+}
+
+.w-5\/12 {
+  width: 41.666667%;
 }
 
 .max-w-7xl {
@@ -704,6 +732,26 @@ video {
   border-color: rgb(71 85 105 / var(--tw-border-opacity));
 }
 
+.border-\[\#d0f7f3\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(208 247 243 / var(--tw-border-opacity));
+}
+
+.border-slate-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(148 163 184 / var(--tw-border-opacity));
+}
+
+.border-slate-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(241 245 249 / var(--tw-border-opacity));
+}
+
+.border-slate-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+}
+
 .bg-\[\#39BBBD\] {
   --tw-bg-opacity: 1;
   background-color: rgb(57 187 189 / var(--tw-bg-opacity));
@@ -754,43 +802,13 @@ video {
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#f1fcfb\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 252 251 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-90 {
   --tw-bg-opacity: 0.9;
-}
-
-.from-green-400 {
-  --tw-gradient-from: #4ade80 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(74 222 128 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-\[\#194448\] {
-  --tw-gradient-from: #194448 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(25 68 72 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.via-\[red\] {
-  --tw-gradient-to: rgb(255 0 0 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), red var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.via-\[\#1a8187\] {
-  --tw-gradient-to: rgb(26 129 135 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #1a8187 var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.via-\[\#185257\] {
-  --tw-gradient-to: rgb(24 82 87 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #185257 var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.to-blue-500 {
-  --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
-}
-
-.to-\[\#08272b\] {
-  --tw-gradient-to: #08272b var(--tw-gradient-to-position);
 }
 
 .p-2 {
@@ -801,6 +819,10 @@ video {
   padding: 1rem;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -809,6 +831,11 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .pt-16 {
@@ -941,23 +968,6 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes mostrar {
-  0%{
-    opacity: 0;
-  }
-
-  100%{
-    opacity: 1;
-  }
-}
-
-.mostrar-desc {
-  animation-name: mostrar;
-  animation-duration: 2s;
-  animation-delay: 1s;
-  animation-iteration-count: 1;
 }
 
 .loader {
@@ -1193,9 +1203,9 @@ video {
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark\:bg-\[\#194448\] {
-    --tw-bg-opacity: 1;
-    background-color: rgb(25 68 72 / var(--tw-bg-opacity));
+  .dark\:border-slate-600 {
+    --tw-border-opacity: 1;
+    border-color: rgb(71 85 105 / var(--tw-border-opacity));
   }
 
   .dark\:bg-\[\#334155\] {
@@ -1220,23 +1230,6 @@ video {
 
   .dark\:bg-transparent {
     background-color: transparent;
-  }
-
-  .dark\:bg-\[\#08272b\] {
-    --tw-bg-opacity: 1;
-    background-color: rgb(8 39 43 / var(--tw-bg-opacity));
-  }
-
-  .dark\:bg-gradient-to-r {
-    background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  }
-
-  .dark\:bg-gradient-to-tr {
-    background-image: linear-gradient(to top right, var(--tw-gradient-stops));
-  }
-
-  .dark\:bg-gradient-to-br {
-    background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
   }
 
   .dark\:text-slate-50 {
@@ -1301,6 +1294,18 @@ video {
   .md\:w-9\/12 {
     width: 75%;
   }
+
+  .md\:w-1\/4 {
+    width: 25%;
+  }
+
+  .md\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .md\:w-\[70\%\] {
+    width: 70%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1322,6 +1327,14 @@ video {
 
   .lg\:w-\[50\%\] {
     width: 50%;
+  }
+
+  .lg\:w-\[20\%\] {
+    width: 20%;
+  }
+
+  .lg\:w-\[40\%\] {
+    width: 40%;
   }
 
   .lg\:flex-row {

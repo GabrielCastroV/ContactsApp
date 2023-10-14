@@ -20,14 +20,14 @@ const createNavHome = () => {
         <!-- tablet/pc version -->
 
           <div class="hidden md:flex flex-row gap-4">
-            <a href="/login/" class="hover:underline dark:text-zinc-50">Login</a>
+            <a href="/login/" class="hover:underline dark:text-zinc-50">Iniciar Sesión</a>
             <a href="/signup/" class="hover:underline dark:text-zinc-50">Registro</a>
           </div>
 
           <!-- menu mobile -->
 
             <div class="fixed bg-slate-800 bg-opacity-90 top-16 right-0 hidden left-0 bottom-0 justify-center items-center flex-col text-slate-50 gap-4">
-                <a href="/login/" class="bg-[#39BBBD] hover:bg-[#429fa0] dark:text-zinc-900 rounded-lg p-4">Login</a>
+                <a href="/login/" class="bg-[#39BBBD] hover:bg-[#429fa0] dark:text-zinc-900 rounded-lg p-4">Iniciar Sesión</a>
                 <a href="/signup/" class="bg-[#39BBBD] hover:bg-[#429fa0] dark:text-zinc-900 rounded-lg p-4">Registro</a>
             </div>          
     </div>
@@ -50,14 +50,13 @@ const createNavSignup = () => {
         <!-- tablet/pc version -->
 
           <div class="hidden md:flex flex-row gap-4">
-            <a href="/login/" class="hover:underline dark:text-zinc-50">Login</a>
-            <a href="/signup/" class="hover:underline dark:text-zinc-50">Registro</a>
+            <a href="/login/" class="hover:underline dark:text-zinc-50">Iniciar Sesión</a>
           </div>
 
           <!-- menu mobile -->
 
             <div class="fixed bg-slate-800 bg-opacity-90 top-16 right-0 hidden left-0 bottom-0 justify-center items-center flex-col text-slate-50 gap-4">
-                <a href="/login/" class="bg-[#39BBBD] hover:bg-[#429fa0] dark:text-zinc-900 rounded-lg p-4">Login</a>
+                <a href="/login/" class="bg-[#39BBBD] hover:bg-[#429fa0] dark:text-zinc-900 rounded-lg p-4">Iniciar Sesión</a>
             </div>          
     </div>
     `;
@@ -79,7 +78,6 @@ const createNavLogin = () => {
         <!-- tablet/pc version -->
 
           <div class="hidden md:flex flex-row gap-4">
-            <a href="/login/" class="hover:underline dark:text-zinc-50">Login</a>
             <a href="/signup/" class="hover:underline dark:text-zinc-50">Registro</a>
           </div>
 

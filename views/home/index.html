@@ -9,7 +9,7 @@
 </head>
 <body class="bg-slate-50 dark:bg-slate-800">
 
-<nav id="nav" class="fixed top-0 right-0 left-0 h-16 border-b-2 border-slate-600">
+<nav id="nav" class="fixed top-0 right-0 left-0 h-16 border-b-2 border-slate-200 dark:border-slate-600">
 </nav>    
 
 
@@ -20,18 +20,21 @@ justify-center
 items-center
 h-screen
 px-4
-gap-8
+pt-16
+gap-4
 text-zinc-900
 dark:text-white
 mx-auto
+md:w-[70%]
 lg:flex-row
 lg:w-3/4
+max-w-7xl
 ">
-    <h1 id="title" class="text-4xl font-bold lg:w-[50%] lg:text-center lg:text-8xl">Welcome</h1>
-    <div id="desc-container" class="flex flex-col gap-8 lg:w-[50%] mostrar-desc opacity-0">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem perferendis repellendus voluptates distinctio libero possimus dolore quae! Necessitatibus doloremque vel eligendi veniam fuga minima a, dolores debitis nam, modi ut!</p>
-        <a class="bg-[#39BBBD] hover:bg-[#429fa0] rounded-lg duration-100 font-semibold text-center text-zinc-50 dark:text-zinc-900" href="/login/"> Entrar a la app</a>
-    </div>
+<img id="title" class="lg:w-[40%] w-5/12" src="images/home.svg">
+<div id="desc-container" class="flex flex-col gap-8 lg:w-[50%]">
+    <p>Mantén tus contactos organizados, sincronizados y al alcance de tu mano. Olvídate de perder números de teléfono o direcciones de correo electrónico. Con ContactsApp, puedes gestionar tus contactos de manera eficiente y nunca perder el contacto con amigos, familiares y colegas. ¡Simplifica tu vida y mantén tus relaciones bajo control con ContactsApp!</p>
+    <a class="bg-[#39BBBD] hover:bg-[#429fa0] rounded-lg duration-100 font-semibold text-center p-1 text-zinc-50 dark:text-zinc-900 " href="/signup/"> Entrar a la app</a>
+</div>
 </main>
 
     <script src="index.js"></script>
